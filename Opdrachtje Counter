@@ -1,0 +1,15 @@
+class Counter:
+
+
+    def __init__(self, n=None):
+        self.default_value = n
+
+
+    def __call__(self, value):
+        if self.default_value == None:
+            self.default_value = value
+        else:
+            try:
+                print(self.default_value + value)
+            except TypeError:
+                print('That is not a number!')
